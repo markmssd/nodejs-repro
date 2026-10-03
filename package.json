@@ -1,0 +1,11 @@
+{
+  "name": "jest-vm-context-leak",
+  "private": true,
+  "scripts": {
+    "repro": "node --expose-gc node_modules/jest/bin/jest.js --runInBand",
+    "repro:fixed": "node --expose-gc --retain-maps-for-n-gc=0 node_modules/jest/bin/jest.js --runInBand"
+  },
+  "devDependencies": {
+    "jest": "30.5.2"
+  }
+}
